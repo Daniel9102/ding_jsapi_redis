@@ -1,0 +1,19 @@
+{
+  "name": "ding_jsapi_redis",
+  "version": "1.0.0",
+  "description": "dingTalk redis access_token",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "async": "^1.4.2",
+    "moment": "^2.17.1",
+    "q": "^1.4.1",
+    "redis": "^2.6.5",
+    "request": "^2.81.0",
+    "underscore": "^1.8.3"
+  },
+  "author": "Nico",
+  "license": "ISC"
+}
