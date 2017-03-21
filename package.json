@@ -1,6 +1,6 @@
 {
   "name": "ding_jsapi_redis",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "dingTalk redis access_token",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,6 @@
     "request": "^2.81.0",
     "underscore": "^1.8.3"
   },
-  "author": "Nico",
+  "author": "shimng",
   "license": "ISC"
 }

@@ -1,5 +1,5 @@
 /**
- * Created by nico on 2017/3/11.
+ * Created by shimng on 2017/3/11.
  */
 var Q = require("q");
 var async = require("async");
@@ -109,7 +109,13 @@ module.exports = {
         })
         return q.promise;
     },
-    getSignature:function(){
-
+    getSignature:function(url){
+        var q = Q.defer();
+        auth.getSignature(url).then(function (data) {
+            q.resolve(data);
+        }).catch(function (err) {
+            q.reject(err);
+        })
+        return q.promise;
     },
 }

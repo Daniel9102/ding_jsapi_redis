@@ -1,5 +1,5 @@
 # ding_jsapi_redis
-> 钉钉Node.js SDK,基于redis缓存access_token
+> 钉钉Node.js SDK,基于redis缓存access_token 和 ticket
 
 ### 开始
 首先安装npm包
@@ -47,6 +47,31 @@ https://oapi.dingtalk.com/department/list?access_token=ACCESS_TOKEN
 action:string
 params:{} 为可选，默认为{}
 
+通用post请求
+```
+ding.httpPostFunc({
+      action : "",
+      params:{}
+  }).then()
+
+```
+获取ticket方法
+```
+//url形如http://192.168.1.6
+ding.getSignature(url).then(function(data){
+    /*
+    {
+        corpId:"",
+        timeStamp:"",
+        nonceStr:"",
+        signature:""
+    }
+    */
+})
+
+```
+
+
 ### 举个栗子
 dingTalk文档中
 ```
@@ -60,4 +85,6 @@ ding.httpGetFunc({
 	params:{id:1}
 }).then()
 ```
+
+
 
