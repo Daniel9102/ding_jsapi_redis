@@ -118,4 +118,23 @@ module.exports = {
         })
         return q.promise;
     },
+
+    getChannelAccessToken:function(){
+        var q = Q.defer();
+        auth.getChannelAccessToken().then(function (data) {
+            q.resolve(data);
+        }).catch(function (err) {
+            q.reject(err);
+        })
+        return q.promise;
+    },
+    getChannelSignature:function(url){
+        var q = Q.defer();
+        auth.getChannelSignature(url).then(function (data) {
+            q.resolve(data);
+        }).catch(function (err) {
+            q.reject(err);
+        })
+        return q.promise;
+    },
 }
