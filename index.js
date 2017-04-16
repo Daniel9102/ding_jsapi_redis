@@ -22,11 +22,19 @@ module.exports = {
         var q = Q.defer();
         async.waterfall([
             function (cb) {
-                auth.getAccessToken().then(function (data) {
-                    cb(null,data);
-                }).catch(function (err) {
-                    cb(err)
-                });
+                if(args.type === 1){
+                    auth.getChannelAccessToken().then(function (data) {
+                        cb(null,data);
+                    }).catch(function (err) {
+                        cb(err)
+                    });
+                }else{
+                    auth.getAccessToken().then(function (data) {
+                        cb(null,data);
+                    }).catch(function (err) {
+                        cb(err)
+                    });
+                }
             },
             function (token,cb) {
                 var params = args.params || {} ;
@@ -54,11 +62,19 @@ module.exports = {
         var q = Q.defer();
         async.waterfall([
             function (cb) {
-                auth.getAccessToken().then(function (data) {
-                    cb(null,data);
-                }).catch(function (err) {
-                    cb(err)
-                });
+                if(args.type === 1){
+                    auth.getChannelAccessToken().then(function (data) {
+                        cb(null,data);
+                    }).catch(function (err) {
+                        cb(err)
+                    });
+                }else{
+                    auth.getAccessToken().then(function (data) {
+                        cb(null,data);
+                    }).catch(function (err) {
+                        cb(err)
+                    });
+                }
             },
             function (token,cb) {
                 var params = args.params || {} ;
